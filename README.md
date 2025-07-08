@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/ee09df48-e8d7-49a6-9e5a-ae0930f7ff04)
+
 # NLW Agents - Web
 
 Projeto desenvolvido durante um evento da Rocketseat para demonstrar o uso de agentes inteligentes na web.
@@ -66,8 +68,6 @@ src/
 ``` 
 
 # NLW Agents - Server
-
-# NLW Agents
 
 Projeto desenvolvido durante um evento da **Rocketseat** utilizando tecnologias modernas para criação de uma API robusta e eficiente.
 
