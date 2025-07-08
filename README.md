@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/ee09df48-e8d7-49a6-9e5a-ae0930f7ff04)
+![image](https://github.com/user-attachments/assets/479ea4a7-d63c-4b21-b586-da1a917622dc)
 
 # NLW Agents - Web
 
