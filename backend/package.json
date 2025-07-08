@@ -1,31 +1,35 @@
 {
-    "name": "backend",
-    "module": "index.ts",
-    "type": "module",
-    "private": true,
-    "scripts": {
-        "start": "bun --env-file .env --experimental-strip-types --no-warnings src/server.ts",
-        "dev": "bun --env-file .env --experimental-strip-types --no-warnings --watch src/server.ts",
-        "db:seed": "bun --env-file .env --experimental-strip-types --no-warnings src/db/seed.ts"
-    },
-    "devDependencies": {
-        "@biomejs/biome": "2.0.6",
-        "@types/bun": "latest",
-        "drizzle-seed": "^0.3.1",
-        "ultracite": "5.0.32"
-    },
-    "peerDependencies": {
-        "typescript": "^5.8.3"
-    },
-    "dependencies": {
-        "@fastify/cors": "^11.0.1",
-        "@types/node": "^24.0.10",
-        "dotenv": "^17.1.0",
-        "drizzle-kit": "^0.31.4",
-        "drizzle-orm": "^0.44.2",
-        "fastify": "^5.4.0",
-        "fastify-type-provider-zod": "^5.0.1",
-        "postgres": "^3.4.7",
-        "zod": "^3.25.75"
-    }
+	"name": "backend",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"vercel": "echo \"No build step defined\"",
+		"start": "bun --env-file .env --experimental-strip-types --no-warnings src/server.ts",
+		"dev": "bun --env-file .env --experimental-strip-types --no-warnings --watch src/server.ts",
+		"db:seed": "bun --env-file .env --experimental-strip-types --no-warnings src/db/seed.ts",
+		"create:mylint": "bunx --bun biome init && mylint",
+		"mylint": "bunx biome format --write",
+		"commit": "git pull && bun run vercel && bun mylint && read -p 'Descriptions Commit: ' message && git add . && echo -n \"$message - \" && node getTime.js | xargs -I {} git commit -m \"$message - {}\" && git push"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.0.6",
+		"@types/bun": "latest",
+		"drizzle-seed": "^0.3.1",
+		"ultracite": "5.0.32"
+	},
+	"peerDependencies": {
+		"typescript": "^5.8.3"
+	},
+	"dependencies": {
+		"@fastify/cors": "^11.0.1",
+		"@types/node": "^24.0.10",
+		"dotenv": "^17.1.0",
+		"drizzle-kit": "^0.31.4",
+		"drizzle-orm": "^0.44.2",
+		"fastify": "^5.4.0",
+		"fastify-type-provider-zod": "^5.0.1",
+		"postgres": "^3.4.7",
+		"zod": "^3.25.75"
+	}
 }
